@@ -14,4 +14,11 @@ public class BandTest {
     Band myBand = new Band("Coheed and Cambria");
     assertEquals(true, myBand instanceof Band);
   }
+
+  @Test
+  public void getName_bandInstantiatesWithName_String() {
+    Band myBand = new Band("The Dear Hunter");
+    assertEquals("The Dear Hunter", myBand.getName());
+}
+
 }
