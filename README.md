@@ -10,7 +10,7 @@ _A web app designed with Java that allows the user to utilize a database to crea
 
 ##Database Tables
 
-![Database](sqldesign.png)
+![Database](sqldesigner.png)
 
 ## Setup/Installation Requirements
 
