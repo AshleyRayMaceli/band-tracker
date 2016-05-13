@@ -67,15 +67,14 @@ public class BandTest {
     assertTrue(myVenue.equals(savedVenue));
   }
 
-  // @Test Need to write addBand()
-  // public void getVenues_returnsAllVenues_List() {
-  //   Venue myVenue = new Venue("The Middle East");
-  //   myVenue.save();
-  //   Band myBand = new Band("Florence + the Machine");
-  //   myBand.save();
-  //   myVenue.addBand(myBand);
-  //   List savedVenues = myBand.getVenues();
-  //   assertEquals(1, savedVenues.size());
-  // }
+  @Test
+  public void getVenues_returnsAllVenues_emptyList() {
+    Venue myVenue = new Venue("The Middle East");
+    myVenue.save();
+    Band myBand = new Band("Florence + the Machine");
+    myBand.save();
+    List savedVenues = myBand.getVenues();
+    assertEquals(0, savedVenues.size());
+  }
 
 }
