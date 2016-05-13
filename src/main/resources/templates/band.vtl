@@ -9,15 +9,18 @@
     </form>
 
     <br>
+    <form action="/bands/$band.getId()/venue/new" method="post">
+      <input id="venue-name" name="venue-name" type="text" required>
+      <button type="submit" class="btn btn-primary" id="add-venue">Add Venue</button>
+    </form>
+
+    <br>
     <form action="/bands/$band.getId()/delete" method='post'>
       <button type="submit" class="btn btn-danger" id="delete-band">Delete Band</button>
     </form>
 
     <br>
-    <form action="/bands/$band.getId()/venue/new" method="post">
-      <input id="venue-name" name="venue-name" type="text" required>
-      <button type="submit" class="btn btn-primary" id="add-venue">Add Venue</button>
-    </form>
+    <a href="/" class="btn btn-warning">Back To Home</a>
 
   </div>
 
@@ -34,5 +37,3 @@
   </div>
 
 </div>
-
-<a href="/" class="btn btn-warning">Back To Home</a>
