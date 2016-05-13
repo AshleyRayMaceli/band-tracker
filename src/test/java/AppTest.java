@@ -31,4 +31,11 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Band Tracker");
   }
 
+  @Test
+  public void allBandsPageIsDisplayed() {
+    goTo("http://localhost:4567/");
+    click("a", withText("View All Bands"));
+    assertThat(pageSource().contains("All Bands"));
+  }
+
 }

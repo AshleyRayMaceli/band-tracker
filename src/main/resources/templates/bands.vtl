@@ -1,0 +1,10 @@
+bands.vtl
+
+<h1>All Bands</h1>
+
+#foreach ($band in $bands)
+  <a href="/bands/$band.getId()">$band.getName()</a>
+  <br>
+#end
+
+<a href="/" class="btn btn-warning">Back To Home</a>
