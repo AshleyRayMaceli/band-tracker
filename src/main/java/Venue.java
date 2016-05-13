@@ -13,5 +13,11 @@ public class Venue {
   public String getName() {
     return name;
   }
-  
+
+  public static List<Venue> all() {
+    String sql = "SELECT * FROM venues";
+    try(Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql).executeAndFetch(Venue.class);
+    }
+  }
 }
