@@ -5,7 +5,7 @@ band.vtl
 <div class="row">
   <div class="col-md-6">
     <form action="/bands/$band.getId()/update" method="post">
-      <input id="update" name="update" type="text">
+      <input id="update" name="update" type="text" required>
 
       <button type="submit" class="btn btn-success" id="update-submit">Update Band Name</button>
     </form>
@@ -17,7 +17,7 @@ band.vtl
 
     <br>
     <form action="/bands/$band.getId()/venue/new" method="post">
-      <input id="venue-name" name="venue-name" type="text">
+      <input id="venue-name" name="venue-name" type="text" required>
       <button type="submit" class="btn btn-primary" id="add-venue">Add Venue</button>
     </form>
 
