@@ -54,4 +54,15 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Add New Band");
   }
 
+  @Test
+  public void bandNameIsUpdated() {
+    Band testBand = new Band("The White Stripes");
+    testBand.save();
+    String url = String.format("http://localhost:4567/bands/%d", testBand.getId());
+    goTo(url);
+    fill("#update").with("Jack White");
+    submit("#update-submit");
+    assertThat(pageSource().contains("Jack White"));
+  }
+
 }
