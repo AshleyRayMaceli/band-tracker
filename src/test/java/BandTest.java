@@ -77,4 +77,16 @@ public class BandTest {
     assertEquals(0, savedVenues.size());
   }
 
+  @Test
+  public void delete_deleteAllBandAndVenueAssociations() {
+    Venue myVenue = new Venue("Radio City Music Hall");
+    myVenue.save();
+    Band myBand = new Band("Modest Mouse");
+    myBand.save();
+    myVenue.addBand(myBand);
+    myBand.delete();
+    assertEquals(0, Band.all().size());
+    assertEquals(0, myVenue.getBands().size());
+  }
+
 }
