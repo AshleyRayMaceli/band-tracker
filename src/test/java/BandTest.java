@@ -19,6 +19,11 @@ public class BandTest {
   public void getName_bandInstantiatesWithName_String() {
     Band myBand = new Band("The Dear Hunter");
     assertEquals("The Dear Hunter", myBand.getName());
-}
+  }
+
+  @Test
+  public void all_emptyAtFirst() {
+    assertEquals(Band.all().size(), 0);
+  }
 
 }
