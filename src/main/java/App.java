@@ -68,8 +68,21 @@ public class App {
       String name = request.queryParams("venue-name");
       List<Venue> allVenues = Venue.all();
       Venue newVenue = new Venue(name);
-      newVenue.save();
-      band.addVenue(newVenue);
+      boolean matchFound = false;
+
+      for(Venue oldVenue : allVenues) {
+        if (newVenue.getName().equals(oldVenue.getName())) {
+          band.addVenue(oldVenue);
+          matchFound = true;
+          break;
+        }
+      }
+
+      if (matchFound == false) {
+        newVenue.save();
+        band.addVenue(newVenue);
+      }
+
       response.redirect("/bands/" + band.getId());
       return null;
     });
