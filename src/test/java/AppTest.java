@@ -75,4 +75,17 @@ public class AppTest extends FluentTest {
     assertFalse(pageSource().contains("The Black Keys"));
   }
 
+  @Test
+  public void venueAddedToBand() {
+    Band testBand = new Band("The Dear Hunter");
+    testBand.save();
+    Venue testVenue = new Venue("The Sinclair");
+    testVenue.save();
+    String url = String.format("http://localhost:4567/bands/%d", testBand.getId());
+    goTo(url);
+    fill("#venue-name").with("The Sinclair");
+    submit("#add-venue");
+    assertThat(pageSource()).contains("The Sinclair");
+  }
+
 }
