@@ -65,4 +65,14 @@ public class AppTest extends FluentTest {
     assertThat(pageSource().contains("Jack White"));
   }
 
+  @Test
+  public void bandIsDeleted() {
+    Band testBand = new Band("The Black Keys");
+    testBand.save();
+    String url = String.format("http://localhost:4567/bands/%d", testBand.getId());
+    goTo(url);
+    submit("#delete-band");
+    assertFalse(pageSource().contains("The Black Keys"));
+  }
+
 }
