@@ -33,4 +33,11 @@ public class VenueTest {
     assertTrue(firstVenue.equals(secondVenue));
   }
 
+  @Test
+  public void save_savesVenueCorrectly_1() {
+    Venue newVenue = new Venue("Mississippi Studios");
+    newVenue.save();
+    assertEquals(1, Venue.all().size());
+  }
+
 }
