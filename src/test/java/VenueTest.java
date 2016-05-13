@@ -48,4 +48,26 @@ public class VenueTest {
     assertTrue(myVenue.equals(savedVenue));
   }
 
+  @Test
+  public void addBand_addBandToVenue() {
+    Venue myVenue = new Venue("The Crazy Donkey");
+    myVenue.save();
+    Band myBand = new Band("Grimes");
+    myBand.save();
+    myVenue.addBand(myBand);
+    Band savedBand = myVenue.getBands().get(0);
+    assertTrue(myBand.equals(savedBand));
+  }
+
+  @Test
+  public void getBands_returnsAllBands_List() {
+    Venue myVenue = new Venue("Moda Center");
+    myVenue.save();
+    Band myBand = new Band("The White Stripes");
+    myBand.save();
+    myVenue.addBand(myBand);
+    List savedBands = myVenue.getBands();
+    assertEquals(1, savedBands.size());
+  }
+
 }
