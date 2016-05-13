@@ -56,4 +56,26 @@ public class BandTest {
     assertEquals("The Dear Hunter", Band.find(myBand.getId()).getName());
   }
 
+  @Test
+  public void addVenue_addVenueToBand() {
+    Venue myVenue = new Venue("Aladdin Theater");
+    myVenue.save();
+    Band myBand = new Band("Purity Ring");
+    myBand.save();
+    myBand.addVenue(myVenue);
+    Venue savedVenue = myBand.getVenues().get(0);
+    assertTrue(myVenue.equals(savedVenue));
+  }
+
+  // @Test Need to write addBand()
+  // public void getVenues_returnsAllVenues_List() {
+  //   Venue myVenue = new Venue("The Middle East");
+  //   myVenue.save();
+  //   Band myBand = new Band("Florence + the Machine");
+  //   myBand.save();
+  //   myVenue.addBand(myBand);
+  //   List savedVenues = myBand.getVenues();
+  //   assertEquals(1, savedVenues.size());
+  // }
+
 }
