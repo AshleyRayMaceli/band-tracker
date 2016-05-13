@@ -48,4 +48,12 @@ public class BandTest {
     assertTrue(myBand.equals(savedBand));
   }
 
+  @Test
+  public void update_updatesBandName_true() {
+    Band myBand= new Band("The Deer Hunter");
+    myBand.save();
+    myBand.update("The Dear Hunter");
+    assertEquals("The Dear Hunter", Band.find(myBand.getId()).getName());
+  }
+
 }
