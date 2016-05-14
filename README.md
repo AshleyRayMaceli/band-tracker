@@ -18,13 +18,14 @@ _A web app designed with Java that allows the user to utilize a database to crea
 * _Clone repository to desktop_
 * _Use console to enter directory with all files_
 * _In a new console window run the command 'postgres' and keep running_
-* _In bash console run the command 'psql band_tracker < band_tracker.sql' to properly download the database file_
-* _In bash console run the command 'psql band_tracker_test < band_tracker_test.sql' to properly download the test database file_
 * _In a new console window run the command 'psql' then 'CREATE DATABASE band_tracker;'_
+* _In the same console window run the command 'psql' then 'CREATE DATABASE band_tracker_test;'_
+* _In bash console run the command 'psql band_tracker < band_tracker.sql' to properly download the database file into the empty database you just created_
+* _In the same bash console run the command 'psql band_tracker_test < band_tracker_test.sql' to properly download the database file into the empty database you just created_
 * _(Alternative to downloading test database file: Run the command '\c band_tracker' to connect to the database. To create the test database run the command 'CREATE DATABASE band_tracker_test WITH TEMPLATE band_tracker;')_
 * _RUNNING THE WEB APP_
 * _In console run the command 'gradle run'_
-* _Go to http://localhost:4567/_
+* _Open your browser and go to http://localhost:4567/_
 
 ## Known Bugs
 
