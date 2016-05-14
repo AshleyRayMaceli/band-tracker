@@ -102,6 +102,5 @@ public class App {
       model.put("template", "templates/venue.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-
   }
 }

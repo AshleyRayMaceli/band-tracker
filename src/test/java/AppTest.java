@@ -103,5 +103,4 @@ public class AppTest extends FluentTest {
     goTo(url);
     assertThat(pageSource()).contains("The Palladium");
   }
-
 }

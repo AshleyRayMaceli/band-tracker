@@ -1,26 +1,24 @@
-<h1>$band.getName()</h1>
+<h1 class="band-title">$band.getName()</h1>
 
 <div class="row">
   <div class="col-md-6">
+    <br>
     <form action="/bands/$band.getId()/update" method="post">
       <input id="update" name="update" type="text" required>
 
-      <button type="submit" class="btn btn-success" id="update-submit">Update Band Name</button>
+      <button type="submit" class="btn btn-default" id="update-submit">Update Band Name</button>
     </form>
 
     <br>
     <form action="/bands/$band.getId()/venue/new" method="post">
       <input id="venue-name" name="venue-name" type="text" required>
-      <button type="submit" class="btn btn-info" id="add-venue">Add Venue</button>
+      <button type="submit" class="btn btn-default" id="add-venue">Add Venue</button>
     </form>
 
     <br>
     <form action="/bands/$band.getId()/delete" method='post'>
       <button type="submit" class="btn btn-danger" id="delete-band">Delete Band</button>
     </form>
-
-    <br>
-    <a href="/" class="btn btn-warning">Back To Home</a>
 
   </div>
 
@@ -35,5 +33,7 @@
       <h2>No Venues Added Yet</h2>
     #end
   </div>
-
 </div>
+
+<br>
+<a href="/" class="btn btn-info">Back To Home</a>
