@@ -1,3 +1,9 @@
+![Homepage](homepage.png)
+
+![All Venues Page](venues.png)
+
+![Band Page](band_page.png)
+
 # _Band Tracker_
 
 #### _A web app where the user can add bands and venues to a database with SQL_
